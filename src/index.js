@@ -42,7 +42,7 @@ io.on("connection", (socket) => {
         }
         socket.join(user.room)
 
-        socket.emit("message", generateMsg("Welcome to my app ;)"));
+        socket.emit("message", generateMsg('O V E R L O R D', "Welcome to my app ;)"));
         socket.broadcast.to(user.room).emit("message", generateMsg(`${user.username} has joined`));
 
         callback()
